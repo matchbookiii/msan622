@@ -1,9 +1,9 @@
 Homework 1: Basic Charts
 ==============================
 
-| **Name**  | [YOUR NAME]  |
+| **Name**  | [Jeffrey Flint]  |
 |----------:|:-------------|
-| **Email** | [USERNAME]@dons.usfca.edu |
+| **Email** |  jeffrey.flint@gmail.com|
 
 ## Instructions ##
 
