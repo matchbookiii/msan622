@@ -19,7 +19,7 @@ library(devtools)
 source_url("https://github.com/matchbookiii/msan622/blob/master/homework1/hw1.R")
 ```
 
-This will generate 5 images and some text output. See below for details.
+This will generate 4 images and some text output. See below for details.
 
 ## Discussion ##
 ### Scatter Plot ###
