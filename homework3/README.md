@@ -23,7 +23,7 @@ This will show an image in your default browser.
 
 ## Discussion ##
 
-Overall, I was interesting in exploring which visualization technique would best help see predictors of Life Expectancy.
+Overall, I was interesting in exploring which visualization technique would best help see predictors of Life Expectancy. I liked the "drill down" benefit the heat map provided for scatterplot and multiline plots.
 
 ### Scatterplot Matrix ##
 
@@ -45,6 +45,10 @@ The heat map also shows the correlation between predictors for Life Expectancy. 
 
 ### Interactivity ###
 
-![IMAGE](multiline.png)
+I pulled all of the above together with a checkbox that selects which quartile of Life Expectancy to display.  My plan was to brush away the unselected items so that the color of each quartile would remain constant, but I was not able to understand how to implement brushing in both the scatterplot and the multi-line plot.
+
+I did change the low color of the heatmap to red, to better correspond to the default 1st quartile color of Life Expectancy.
+
+![IMAGE](combo.PNG)
 
 
