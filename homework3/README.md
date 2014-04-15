@@ -7,6 +7,7 @@ Homework 3: Multivariate
 
 ## Instructions ##
 
+<<<<<<< HEAD
 The following packages must be installed prior to running this code:
 
 - `ggplot2`
@@ -50,5 +51,39 @@ I pulled all of the above together with a checkbox that selects which quartile o
 I did change the low color of the heatmap to red, to better correspond to the default 1st quartile color of Life Expectancy.
 
 ![IMAGE](combo.PNG)
+=======
+Use the following code to run this `shiny` app:
+
+```
+library(shiny)
+runGitHub("msan622", "[username]", subdir = "homework3")
+```
+
+## Discussion ##
+
+### Technique 1: [TYPE] ###
+
+![technique1](technique1.png)
+
+[DISCUSSION]
+
+### Technique 2: [TYPE] ###
+
+![technique2](technique2.png)
+
+[DISCUSSION]
+
+### Technique 3: [TYPE] ###
+
+![technique3](technique3.png)
+
+[DISCUSSION]
+
+### Interactivity ###
+
+![screenshot](screenshot.png)
+
+[DISCUSSION]
+>>>>>>> 54950a81fe30d3db96980eddf196831824bcd4c9
 
 
