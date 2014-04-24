@@ -1,26 +1,28 @@
 require(reshape2) # melt
+require(ggplot2)
 
+df = data.frame()
 mkdata = function() {
 
 data(Seatbelts)
 
-df=data.frame(Seatbelts)
-df$time=as.numeric(time(Seatbelts))
-df$month <- factor(
+d=data.frame(Seatbelts)
+d$time=as.numeric(time(Seatbelts))
+d$month <- factor(
     month.abb[cycle(time(Seatbelts))],
     levels = month.abb,
     ordered = TRUE
 )
-df$year <- factor(floor(time(Seatbelts)),ordered=TRUE)
-df$driver=with(df,1000*drivers/kms)
-df$"frontpassenger"=with(df,1000*front/kms)
-df$"rearpassenger"=with(df,1000*rear/kms)
-df$total = with(df,(drivers+rear+front)*1000/kms)
-df$killed = with(df,DriversKilled*1000/kms)
-df$VanKilled = with(df,VanKilled*1000/kms)
-df <<- df
+d$year <- factor(floor(time(Seatbelts)),ordered=TRUE)
+d$driver=with(d,1000*drivers/kms)
+d$"frontpassenger"=with(d,1000*front/kms)
+d$"rearpassenger"=with(d,1000*rear/kms)
+d$total = with(d,(drivers+rear+front)*1000/kms)
+d$killed = with(d,DriversKilled*1000/kms)
+d$VanKilled = with(d,VanKilled*1000/kms)
+df <<- d
 molten <<- melt(
-    df,
+    d,
     id = c("year", "month", "time")
 )
 #molten$variable = factor(molten$variable,levels=
@@ -36,7 +38,7 @@ molten <<- melt(
 #))
 						 
 #molten <<- molten
-
+d
 }
 
 pal=scale_color_hue()
@@ -122,4 +124,6 @@ hw5 = function() {
   X11()
   petrol()
 }
+
+hw5()
 
