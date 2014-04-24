@@ -1,0 +1,125 @@
+require(reshape2) # melt
+
+mkdata = function() {
+
+data(Seatbelts)
+
+df=data.frame(Seatbelts)
+df$time=as.numeric(time(Seatbelts))
+df$month <- factor(
+    month.abb[cycle(time(Seatbelts))],
+    levels = month.abb,
+    ordered = TRUE
+)
+df$year <- factor(floor(time(Seatbelts)),ordered=TRUE)
+df$driver=with(df,1000*drivers/kms)
+df$"frontpassenger"=with(df,1000*front/kms)
+df$"rearpassenger"=with(df,1000*rear/kms)
+df$total = with(df,(drivers+rear+front)*1000/kms)
+df$killed = with(df,DriversKilled*1000/kms)
+df$VanKilled = with(df,VanKilled*1000/kms)
+df <<- df
+molten <<- melt(
+    df,
+    id = c("year", "month", "time")
+)
+#molten$variable = factor(molten$variable,levels=
+
+#c("DriversKilled","drivers","front","rear",
+#"kms","PetrolPrice","VanKilled","law",
+#"total","driver","frontpassenger","rearpassenger", "killed"
+#), 
+#labels=
+#c("DriversKilled","drivers","front","rear",
+#"distance travelled","price of petrol","VanKilled","law",
+#"any","driver","front passenger","rear passenger", "killed"
+#))
+						 
+#molten <<- molten
+
+}
+
+pal=scale_color_hue()
+pal=pal$palette
+
+serious=function() {
+p = ggplot(df,aes(time))
+#p = p + geom_point(aes(y=total,color="any"),alpha=0.4)
+p = p + geom_line(aes(y=total,color="any"),alpha=0.4)
+p = p + geom_smooth(aes(y=total,color="any"),alpha=1,size=0.70,se=F)
+
+#p = p + geom_point(aes(y=driver,color="driver"),alpha=0.4)
+p = p + geom_line(aes(y=driver,color="driver"),alpha=0.4)
+p = p + geom_smooth(aes(y=driver,color="driver"),alpha=1,size=0.70,se=F)
+
+#p = p + geom_point(aes(y=frontpassenger,color="front passenger"),alpha=0.4)
+p = p + geom_line(aes(y=frontpassenger,color="front passenger"),alpha=0.4)
+p = p + geom_smooth(aes(y=frontpassenger,color="front passenger"),size=0.70,se=F)
+
+#p = p + geom_point(aes(y=rearpassenger,color="rear passenger"),alpha=0.4)
+p = p + geom_line(aes(y=rearpassenger,color="rear passenger"),alpha=0.4)
+p = p + geom_smooth(aes(y=rearpassenger,color="rear passenger"),size=0.70,alpha=1,se=F)
+
+p = p + scale_color_manual(name="position in car",breaks=c("any","driver","front passenger","rear passenger"), values=pal(4))
+
+p = p + labs(x=NULL,y="per 1000 km travelled",title="Serious Car Injuries in England, 1969-1984")
+
+p = p + theme(
+            #legend.direction = "horizontal",
+            legend.position = c(1, 1),
+            legend.justification = c(1, 1),
+            #legend.title = element_blank(),
+            legend.background = element_blank(),
+            legend.key = element_blank()
+        )
+
+print(p)
+}
+
+serious2=function() {
+p = ggplot(subset(molten,time>1979&variable %in% c("total","driver","frontpassenger","rearpassenger")),
+    aes(
+        x = month, 
+        y = value, 
+        group = year, 
+        color = variable
+    ))
+p <- p  + geom_line(size=1)
+p <- p  + scale_x_discrete(labels=NULL)
+p <- p + facet_grid(variable ~ year, scales="free_y")
+p <- p + labs(x=NULL, y="injuries per 1000km travelled",title="Serious Car Injuries in England, 1979-1984")
+#p <- p + scale_colour_brewer(palette = "Set1")
+ #p <- p + facet_wrap(~ year, ncol = 6)
+ p <- p + theme(legend.position="none")
+p = p + theme(axis.ticks.x=element_blank())
+print(p)
+}
+
+petrol = function() {
+p = ggplot(subset(molten,variable %in% c("PetrolPrice","kms")),
+    aes(
+        x = month, 
+        y = value, 
+        group = year, 
+        color = variable
+    ))
+p <- p  + geom_line(size=1)
+p <- p  + scale_x_discrete(labels=NULL)
+p <- p + facet_grid(variable ~ year, scales="free_y")
+p <- p + labs(x=NULL, y=NULL,title="Petrol Prices vs. Distance Driven, 1969-1984")
+#p <- p + scale_colour_brewer(palette = "Set1")
+ #p <- p + facet_wrap(~ year, ncol = 6)
+ p <- p + theme(legend.position="none")
+p = p + theme(axis.ticks.x=element_blank())
+print(p)
+}
+
+hw5 = function() {
+  mkdata()
+  serious()
+  X11()
+  serious2()
+  X11()
+  petrol()
+}
+
