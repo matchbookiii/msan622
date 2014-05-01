@@ -18,8 +18,15 @@ The idea of this visualization is to show service times for one iteration.  Beca
 ![IMAGE](raw.png)
 
 
-###  Raw Data for One Iteration ###
+###  Raw Data for One Iteration, By Length of Trip ###
 
-The idea of this visualization is to show service times for one iteration.  Because each algorithm is evaluated under indentical circumstances (the passenger demand is identical), the comparison is "fair".   The hope is to induce a raw feel for the differences between the effects of each algorithm.  It would be possible to to show different iterations in an interactive setting, but this would probably be overwhelming.
+An extension of the above idea, but instead organizing the data by the distance travelled.
 
 ![IMAGE](raw2.png)
+
+###  Raw Data for One Iteration, By Length of Trip ###
+
+An extension of the above idea, but instead organizing the data by the distance travelled.
+
+![IMAGE](range.png)
+
