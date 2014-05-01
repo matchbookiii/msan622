@@ -37,3 +37,7 @@ Compared, for each algorithm, three distributions: (1) service time (as above); 
 
 ![IMAGE](gross.png)
 
+
+###  Interactive Display ###
+
+Some possibilities: (1) Show the above results for each passenger demand model. (2) Create a "movie" that would show the behavior of the buses under each algorithm.  
