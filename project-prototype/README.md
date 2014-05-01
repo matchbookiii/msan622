@@ -24,9 +24,16 @@ An extension of the above idea, but instead organizing the data by the distance 
 
 ![IMAGE](raw2.png)
 
-###  Raw Data for One Iteration, By Length of Trip ###
+###  Aggregate Data for all 30 Iterations, By Length of Trip ###
 
-An extension of the above idea, but instead organizing the data by the distance travelled.
+Statistically summarized version over all 30 iterations.  Previous graphics were of only a single iteration.
 
 ![IMAGE](range.png)
+
+
+###  ###
+
+Statistically summarized version over all 30 iterations.  Previous graphics were of only a single iteration.
+
+![IMAGE](gross.png)
 
