@@ -31,9 +31,9 @@ Statistically summarized version over all 30 iterations.  Previous graphics were
 ![IMAGE](range.png)
 
 
-###  ###
+###  Distribution Analysis ###
 
-Statistically summarized version over all 30 iterations.  Previous graphics were of only a single iteration.
+Compared, for each algorithm, three distributions: (1) service time (as above); (2) total run time, which is an indicator of the capacity of the scheduling to generate revenue; (3) total bus distance, which is an indicator of maintenance costs.
 
 ![IMAGE](gross.png)
 
