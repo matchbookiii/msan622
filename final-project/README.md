@@ -1,10 +1,9 @@
 Final Project
 ==============================
 
-| **Name**  | [YOUR NAME]  |
+| **Name**  | Jeffrey Flint |
 |----------:|:-------------|
-| **Email** | [USERNAME]@dons.usfca.edu |
+| **Email** | jeffrey.flint@gmail.com |
 
-## Discussion ##
+![IMAGE](multi.png)
 
-[DISCUSSION: Include a discussion here if required by the assignment.]
