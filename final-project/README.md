@@ -5,5 +5,10 @@ Final Project
 |----------:|:-------------|
 | **Email** | jeffrey.flint@gmail.com |
 
-![IMAGE](multi.png)
+![IMAGE](raw.png)
+![IMAGE](raw2.png)
+![IMAGE](range.png)
+![IMAGE](gross.png)
+![IMAGE](multi.PNG)
+![IMAGE](interactive.PNG)
 
