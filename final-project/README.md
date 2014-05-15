@@ -25,9 +25,13 @@ The first of the summary visualization also studies the relationship between ser
 
 I would have liked to include the raw data superimposed on this diagram, with each algorithm dodged and with the alpha low enough that the distribution could be seen visually, but I found it difficult to dodge geom_point.
 
-The lie factor for this visualization is low.  The data density is high because of the power of statistical summaries, but the data/ink ratio is a little low.  Maybe by adjusting the x/y scales the data/ink ratio could be increased.
+The lie factor for this visualization is low.  The data density is high because of the power of statistical summaries, but the data/ink ratio is a little low.  Maybe by adjusting the x/y scales the data/ink ratio could be increased, but when I tried the error bars looked too compressed to me.
 
 ![IMAGE](range.png)
+
+This is the grand-daddy of all statistical summary charts.  Very high data density and data/ink ratio, and a very low lie factor.  It is clear that the "elevator" algorithm is superior in all dimensions.  The text labels emphasize this conclusion by expressing averages relative to the elevator algorithm.
+
+I would have liked to do this chart in ggplot, but because the first column is a density and the last two columns are frequency histograms, a grid in ggplot would not work.  Also, it is not possible to individually label each grid location in ggplot, so I stuck with the standard R plots.  It would have been nice to label each column.
 
 
 ![IMAGE](gross.png)
