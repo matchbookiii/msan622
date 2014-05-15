@@ -24,8 +24,6 @@ doIt = function(now,alg) {
    p = p  + scale_x_continuous(labels=NULL,breaks=c(1,10),limits=c(0.5,10.5))
    p = p + theme(legend.position="none")
    p = p + labs(y=NULL,x=NULL,title=NULL)
-   p = p + scale_fill_manual(values=pal[which(table(rects$bus)> 0)])
-   p = p + scale_color_manual(values=pal[which(table(peeps$bus)> 0)])
 
    if (nrow(peeps)>0) {
       p = p + geom_point(data=peeps,aes(x=location,y=direction,color=bus),alpha=ptAlpha,size=ptSize,position="jitter")

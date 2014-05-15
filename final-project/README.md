@@ -47,7 +47,7 @@ The lie factor is quite low, the data density is quite high, and the data/ink ra
 
 ![IMAGE](multi.PNG)
 
-This last visualization is an interactive visualization.  (in the "bus" directory)  The benefit of making this visualization interactive is that the viewer can really study the methodology of the algorithms in play.  This visualization reenacts the entire simulation for the first iteration as a playback "movie".  Each algorithm is assigned the same bus starting positions and the same passenger demand profile, and the viewer can witness how exactly each algorithm gets its work done.
+This last visualization is an interactive visualization.  (in the "bus" directory, runGitHub("msan622", "matchbookiii", subdir = "final-project/bus"))  The benefit of making this visualization interactive is that the viewer can really study the methodology of the algorithms in play.  This visualization reenacts the entire simulation for the first iteration as a playback "movie".  Each algorithm is assigned the same bus starting positions and the same passenger demand profile, and the viewer can witness how exactly each algorithm gets its work done.
 
 Some notables: The elevator algorithm has the ability to do u-turns at any point, while the other two algorithms can only do u-turns at the ends.  In the chain algorithm, buses are not allowed to pass the bus in front of them.
 
