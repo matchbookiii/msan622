@@ -62,3 +62,7 @@ My prototypes were very close to the final visualizations, except for the intera
 Regarding feedback I did not agree with, I did not receive any really.  All my reviewers were engaged and interested and provided positive support.  
 
 ## Challenges ##
+
+- Getting the colors of discrete data to stay consistent.  A problem happens in some time slices where there were not passengers assigned to every bus.  The result is that the people waiting changed color from frame to frame. I had to force ggplot to respect the same colors by changing the color assignments based upon how many bus types were present.
+- Getting geom_point to dodge.  As I said above, I would have liked to overlay a distribution of points over the error bars by dodging, but I could not get it to work.
+- Having different geoms in different grid locations.  I solved by using standard R plots.
