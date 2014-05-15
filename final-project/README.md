@@ -15,10 +15,13 @@ For the raw data visualizations, the data is in the file "pChart.csv" and "pChar
 
 In the second visualization, the service times for the first iteration are broken down by the length of the trip, a condesation of the first visualization.  Again, the outliers are the "chain" algorithm, but it is difficult to come away with any firm conclusions.
 
-By far the most convincing of the three raw viaualizations is the third visualization, which shows a summary of all three 
-
+Both of these raw data visualizations have a low lie factor, a high data density and data/ink ratio.  However, it was difficult to generalize any point with these single-sample views, with the possible exception that the "chain" algorithm may be producing outliers.  These raw visualizations also did confirm that the data looks reasonable.
 ![IMAGE](raw.png)
 ![IMAGE](raw2.png)
+
+## Data Summary Visualizations ##
+
+
 ![IMAGE](range.png)
 ![IMAGE](gross.png)
 ![IMAGE](multi.PNG)
