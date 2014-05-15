@@ -47,7 +47,7 @@ The lie factor is quite low, the data density is quite high, and the data/ink ra
 
 ![IMAGE](multi.PNG)
 
-This last visualization is an interactive visualization.   The benefit of making this visualization interactive is that the viewer can really study the methodology of the algorithms in play.  This visualization reenacts the entire simulation for the first iteration.  Each algorithm is assigned the same bus starting positions and the same passenger demand profile, and the viewer can witness how exactly each algorithm gets it work done.
+This last visualization is an interactive visualization.   The benefit of making this visualization interactive is that the viewer can really study the methodology of the algorithms in play.  This visualization reenacts the entire simulation for the first iteration as a playback.  Each algorithm is assigned the same bus starting positions and the same passenger demand profile, and the viewer can witness how exactly each algorithm gets it work done.
 
 Some notables: The elevator algorithm has the ability to do u-turns at any point, while the other two algorithms can only do u-turns at the ends.  In the chain algorithm, buses are not allowed to pass the bus in front of them.
 
@@ -55,3 +55,10 @@ This visualization was helpful in finding problems in my simulation code!  I was
 
 ![IMAGE](interactive.PNG)
 
+## Prototype Feedback ##
+
+My prototypes were very close to the final visualizations, except for the interactive visualization, which I had not yet conceived until I saw that "movies" were possible in shiny.  One suggestion that I took to heart was dodging the error-bars to better see them.
+
+Regarding feedback I did not agree with, I did not receive any really.  All my reviewers were engaged and interested and provided positive support.  
+
+## Challenges ##
