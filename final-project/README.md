@@ -21,9 +21,15 @@ Both of these raw data visualizations have a low lie factor, a high data density
 
 ## Data Summary Visualizations ##
 
-The first of the summary visualization also studies the relationship between service time, scheduling algorithm, and service distance, but now with all thirty iterations.  Some interesting patterns are clear.
+The first of the summary visualization also studies the relationship between service time, scheduling algorithm, and service distance, but now with all thirty iterations represented by error bars.  Some interesting patterns are clear.  The "elevator" algorithm is demonstrably better, except perhaps at the long distance trips.  The "elevator" algorithm also shows a linear relationshiop with the length of the trip.   And the "chain" algorithm is demostrably the worst algorithm.
+
+I would have liked to include the raw data superimposed on this diagram, with each algorithm dodged and with the alpha low enough that the distribution could be seen visually, but I found it difficult to dodge geom_point.
+
+The lie factor for this visualization is low.  The data density is high because of the power of statistical summaries, but the data/ink ratio is a little low.  Maybe by adjusting the x/y scales the data/ink ratio could be increased.
 
 ![IMAGE](range.png)
+
+
 ![IMAGE](gross.png)
 ![IMAGE](multi.PNG)
 ![IMAGE](interactive.PNG)
